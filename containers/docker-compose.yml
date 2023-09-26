@@ -11,10 +11,10 @@ services:
     image: wettyoss/wetty
     command:
       - --base=/
-      - --ssh-host=ssh.example.com
+      - --ssh-host=host.docker.internal
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.wetty.rule=Host(`wetty.example.com`)"
+      - "traefik.http.routers.wetty.rule=Host(`host.docker.internal`)"
       # - "traefik.http.routers.wetty.tls.certResolver=default"
       # - "traefik.http.routers.wetty.tls=true"
 
